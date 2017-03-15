@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="JokeText">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+</resources>

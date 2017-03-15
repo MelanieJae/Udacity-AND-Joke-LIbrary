@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidJokeLibrary</string>
+
+    <!-- menu -->
+    <string name="action_settings">Settings</string>
+
+    <!-- main activity -->
+    <string name="temp_joke">derp</string>
+
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/melanieh/AndroidStudioProjects/BuildItBigger/app/build/intermediates/incremental-runtime-classes/free/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/melanieh/AndroidStudioProjects/BuildItBigger/app/build/intermediates/transforms/dex/free/debug/folders/1000/10000/instant-run_ce4cadcc7893e7b4b3cd009f7171b524e0f4a29b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/melanieh/AndroidStudioProjects/BuildItBigger/app/libs/backend-android-endpoints.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e364e2de26295455eb5b27f1d6f37db39346f1d">
+        <dex dex="/Users/melanieh/AndroidStudioProjects/BuildItBigger/app/build/intermediates/transforms/dex/free/debug/folders/1000/2/backend-android-endpoints_dacc684e3fd890f42072479cc72e4d4c69918927/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/melanieh/AndroidStudioProjects/BuildItBigger/app/build/intermediates/incremental-classes/free/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="afb6838815e0cf5b6dbfeee28937b012dd675e69">
+        <dex dex="/Users/melanieh/AndroidStudioProjects/BuildItBigger/app/build/intermediates/transforms/dex/free/debug/folders/1000/10000/instant-run-bootstrap_935ea7d3233cf5bade1b306f13436f8fad0c4f30/classes.dex" />
+    </item>
+
+</items>

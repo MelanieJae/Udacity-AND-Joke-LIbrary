@@ -11,7 +11,7 @@ GCE module and passes them to the Android Library for display.
 
 This project is built using the Gradle build system and a Google Cloud Endpoints/AppEngine backend for its API.
 
-##Development Notes
+## Development Notes
 
 * contains free and paid flavors; the free version contains ads supplied via Google Play/AdMob
 * contains a Java library having an expandable list of jokes
@@ -19,7 +19,7 @@ This project is built using the Gradle build system and a Google Cloud Endpoints
 * contains a backend constructed via Google Cloud Endpoints and the AppEngine plugin
 * contains instrument tests for both the free and paid versions that runs against the local App Engine development server
 
-##Sources
+## Sources
 Project base
 https://github.com/udacity/ud867/tree/master/FinalProject
 

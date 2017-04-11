@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'builditbigger'
+            keyPassword ''
+            storeFile file('$rootDir/BuildItBigger/keystore.jks')
+            storePassword ''
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.udacity.gradle.builditbigger"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile 'proguard-google-api-client.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            pseudoLocalesEnabled false
+        }
+
+        productFlavors {
+            free {
+                applicationId "com.udacity.gradle.builditbigger.free"
+            }
+            paid {
+                applicationId "com.udacity.gradle.builditbigger.paid"
+            }
+        }
+
+    }
+    packagingOptions {
+        exclude 'com/google/appengine/repackaged/org/apache/commons/codec/language/bm/*'
+        exclude 'com/google/appengine/repackaged/org/codehaus/jackson/impl/VERSION.txt'
+        exclude 'com/google/appengine/repackaged/org/apache/commons/codec/language/*'
+        exclude 'messages.xml'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    // launches GCE backend and runs in daemon mode for testing so that async task test
+    // can be run and then shuts down server
+
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':libjokes')
+    compile project(':androidjokelibrary')
+    compile files('libs/backend-android-endpoints.jar')
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.google.code.findbugs:jsr305:2.0.1'
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    compile 'com.google.api-client:google-api-client-android:1.22.0'
+    compile 'com.google.http-client:google-http-client-android:1.22.0-beta'
+    freeCompile 'com.google.android.gms:play-services-ads:10.2.0'
+    compile project(path: ':backend1', configuration: 'android-endpoints')
+    testCompile('junit:junit:4.12')
+}
+
